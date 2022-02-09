@@ -8,4 +8,6 @@ add_executable(2 Stack.cpp)
 add_executable(3 Queue.cpp)
 add_executable(4 Q10845.cpp)
 add_executable(5 Deque.cpp)
+add_executable(6 Q.10866.cpp)
+add_executable(7 "Stack 활용.cpp")
 
