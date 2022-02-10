@@ -10,4 +10,7 @@ add_executable(4 Q10845.cpp)
 add_executable(5 Deque.cpp)
 add_executable(6 Q.10866.cpp)
 add_executable(7 "Stack 활용.cpp")
+add_executable(8 Q.10799.cpp)
+add_executable(9 Q.2504.cpp)
+
 
