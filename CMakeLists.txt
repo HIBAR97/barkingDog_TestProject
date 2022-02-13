@@ -13,5 +13,6 @@ add_executable(7 "Stack 활용.cpp")
 add_executable(8 Q.10799.cpp)
 add_executable(9 Q.2504.cpp)
 add_executable(10 Q.1926.cpp)
+add_executable(11 Q.2178.cpp)
 
 
