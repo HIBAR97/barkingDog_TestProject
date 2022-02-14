@@ -3,30 +3,40 @@
 using namespace std;
 #define X first
 #define Y second
-int bored[502][502];
-bool vis[502][502];
-bool dis[502][502];
+string board[502];
+int dis[502][502];
 int dx[4] = {1,0,-1,0};
 int dy[4] = {0,1,0,-1};
 
-int main() {
+int main(void) {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int x, y;
+    int x, y = 0;
 
     cin >> x >> y;
     for (int i = 0; i < x; i++)
-        for (int j = 0; j < y; j++)
-            cin >> bored[i][j];
+        cin >> board[i];
 
     for (int i = 0; i < x; i++)
-        for (int j = 0; j < y; j++){
-            if (bored[i][j] == 1 || vis[i][j] == 0)
+        fill(dis[i],dis[i] + y, -1); //초기화
+
+
+    queue<pair<int, int> > Q;
+    Q.push({0,0});
+    dis[0][0] = 0;
+
+    while (!Q.empty()){
+        auto cur = Q.front(); Q.pop();
+        for (int dir = 0; dir < 4; dir++) {
+            int nx = cur.X + dx[dir];
+            int ny = cur.Y + dy[dir];
+            if (nx < 0 || nx >= x || ny < 0 || ny >= y)
                 continue;
-
-
+            if (dis[nx][ny] >= 0 || board[nx][ny] != '1')
+                continue;
+            dis[nx][ny] = dis[cur.X][cur.Y] + 1;
+            Q.push({nx, ny});
         }
-
-
-
+    }
+    cout << dis[x-1][y-1] + 1;
 }
