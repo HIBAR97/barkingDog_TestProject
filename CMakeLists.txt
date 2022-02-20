@@ -3,7 +3,7 @@ project(백준프로젝트)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(1 Linked_list.cpp)
+add_executable(1 Linked_list.cpp )
 add_executable(2 Stack.cpp)
 add_executable(3 Queue.cpp)
 add_executable(4 Q10845.cpp)
@@ -20,5 +20,7 @@ add_executable(14 Q.1697.cpp)
 add_executable(15 DFS.cpp)
 add_executable(16 Q.1629.cpp)
 add_executable(17 Q.1074.cpp)
-
+add_executable(18 "DFS와 BFS/DFS와 BFS.cpp")
+add_executable(19 "DFS와 BFS/Q.2606 바이러스.cpp")
+add_executable(20 "DFS와 BFS/Q.2667 단지번호붙이기.cpp")
 
