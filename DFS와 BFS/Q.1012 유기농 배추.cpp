@@ -46,6 +46,7 @@ int main() {
                             Q.push({nx,ny});
                         }
                         cout << area;
+
                     }
             }
         }
