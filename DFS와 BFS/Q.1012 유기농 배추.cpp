@@ -19,21 +19,19 @@ int main() {
     for (int i = 0; i < R; i++) {
         cin >> m >> n >> k;
 
-        for (int j = 0; j <= k; j++) {
+        for (int j = 0; j < k; j++) {
             cin >> Locx >> Locy;
-            board[Locy][Locy] = 1;
+            board[Locy][Locx] = 1;
         }
 
-        for (int j = 0; j < m; j++) {
-            for (int l = 0; l < n; l++) {
+        for (int j = 0; j < n; j++) {
+            for (int l = 0; l < m; l++) {
                 if (board[j][l] == 0 || vis[j][l])
                     continue;
                     queue<pair<int,int>> Q;
                     vis[j][l] = 1;
                     Q.pop();
-
                     while (!Q.empty()){
-                        area++;
                         auto cur = Q.front(); Q.pop();
                         for (int dir = 0; dir < 4; dir++) {
                             int nx = cur.X + dx[dir];
@@ -45,10 +43,10 @@ int main() {
                             vis[nx][ny] = 1;
                             Q.push({nx,ny});
                         }
-                        cout << area;
-
+                        area++;
                     }
             }
         }
+        cout << area;
     }
 }
