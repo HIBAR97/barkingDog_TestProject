@@ -1,12 +1,14 @@
 // https://www.acmicpc.net/problem/7569
 #include <bits/stdc++.h>
 using namespace std;
-#define X first
-#define Y second
-#define Z Third
+//#define X first
+//#define Y second
 int board[102][102][102];
 bool vis[102][102][102];
 int M,N,H;
+int Tomato = 0;
+int Days = 0;
+queue<tuple<int,int,int>> Q;
 int dx[] = {0,0,1,-1,0,0};
 int dy[] = {1,-1,0,0,0,0};
 int dz[] = {0,0,0,0,1,-1};
@@ -32,30 +34,15 @@ int main() {
     for(string& i : board) cin >> i;
      벡터로 입력 받기*/
 
-    for (int i = 0; i < H; i++)
-        for (int j = 0; j < N; j++)
-            for (int k = 0; k < M; k++)
-                cin >> board[i][j][k];
-
     for (int i = 0; i < H; i++){
         for (int j = 0; j < N; j++){
             for (int k = 0; k < M; k++){
-                if (board[i][j][k] == 0 || vis[i][j][k])
-                    continue;
-                board[i][j][k] = 1;
-
-                queue<tuple<int,int,int>> Q;
-                Q.push({i,j,k});
-
-                while (!Q.empty()){
-                    auto [nx,ny,nz] = Q.front(); Q.pop();
-
-                    for (int dir = 0; dir < 6; dir++) {
-                        int nx = [nx,ny,nz].X + dx[dir];
-                        int ny = [nx,ny,nz].Y + dy[dir];
-                        int nz = [nx,ny,nz].Z + dz[dir];
-
-                    }
+                cin >> board[i][j][k];
+                if (board[i][j][k] == 0)
+                    Tomato++;
+                if (board[i][j][k] == 1) {
+                    Q.push({i, j, k});
+                    vis[i][j][k] = 1;
                 }
             }
         }
@@ -64,9 +51,43 @@ int main() {
 
 
 
+    if (Tomato == 0){
+        cout << Tomato;
+        return 0;
+    }
 
+                while (!Q.empty()){
+                    auto cur = Q.front(); Q.pop();
+                    int Size = Q.size();
+                    for (int i = 0; i < Size; i++) {
+                        int X = get<0>(Q.front());
+                        int Y = get<1>(Q.front());
+                        int Z = get<2>(Q.front());
+                        Q.pop();
 
+                        for (int dir = 0; dir < 6; dir++) {
+                            int nx = X + dx[dir];
+                            int ny = Y + dy[dir];
+                            int nz = Z + dz[dir];
 
-
+                            if (nx < 0 || nx >= M || ny < 0 || ny >= N || nz < 0 || nz >= H )
+                                continue;
+                            if (board[nx][ny][nz] != 1 || vis[nx][ny][nz])
+                                continue;
+                            Q.push({nx,ny,nz});
+                            vis[nx][ny][nz] = 1;
+                        }
+                    }
+                    Days++;
+                }
+    if (Tomato > 0){
+        cout << -1;
+    } else{
+        cout << Days - 1 << '\n';
+    }
 
 }
+
+
+
+
