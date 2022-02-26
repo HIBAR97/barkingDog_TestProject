@@ -28,15 +28,15 @@ int main() {
     cin.tie(0);
     cin >> M >> N >> H;
 
-    reset();
+    //reset();
 
     /*vector<string> board(n);
     for(string& i : board) cin >> i;
      벡터로 입력 받기*/
 
-    for (int i = 0; i < H; i++){
+    for (int i = 0; i < M; i++){
         for (int j = 0; j < N; j++){
-            for (int k = 0; k < M; k++){
+            for (int k = 0; k < H; k++){
                 cin >> board[i][j][k];
                 if (board[i][j][k] == 0)
                     Tomato++;
@@ -56,30 +56,30 @@ int main() {
         return 0;
     }
 
-                while (!Q.empty()){
-                    auto cur = Q.front(); Q.pop();
-                    int Size = Q.size();
-                    for (int i = 0; i < Size; i++) {
-                        int X = get<0>(Q.front());
-                        int Y = get<1>(Q.front());
-                        int Z = get<2>(Q.front());
-                        Q.pop();
+    while (!Q.empty()){
+        //auto cur = Q.front(); Q.pop();
+        int Size = Q.size();
+        for (int i = 0; i < Size; i++) {
+            int X = get<0>(Q.front());
+            int Y = get<1>(Q.front());
+            int Z = get<2>(Q.front());
+            Q.pop();
+            for (int dir = 0; dir < 6; dir++) {
+                int nx = X + dx[dir];
+                int ny = Y + dy[dir];
+                int nz = Z + dz[dir];
 
-                        for (int dir = 0; dir < 6; dir++) {
-                            int nx = X + dx[dir];
-                            int ny = Y + dy[dir];
-                            int nz = Z + dz[dir];
-
-                            if (nx < 0 || nx >= M || ny < 0 || ny >= N || nz < 0 || nz >= H )
-                                continue;
-                            if (board[nx][ny][nz] != 1 || vis[nx][ny][nz])
-                                continue;
-                            Q.push({nx,ny,nz});
-                            vis[nx][ny][nz] = 1;
-                        }
-                    }
-                    Days++;
-                }
+                if (nx < 0 || nx >= M || ny < 0 || ny >= N || nz < 0 || nz >= H )
+                    continue;
+                if (board[nx][ny][nz] != 1 || vis[nx][ny][nz])
+                    continue;
+                Q.push({nx,ny,nz});
+                vis[nx][ny][nz] = vis[X][Y][Z] + 1;
+                Tomato--;
+            }
+        }
+        Days++;
+    }
     if (Tomato > 0){
         cout << -1;
     } else{
