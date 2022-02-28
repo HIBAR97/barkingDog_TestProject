@@ -72,7 +72,8 @@ int main() {
                 if (board[nx][ny][nz] == 1 || vis[nx][ny][nz])
                     continue;
                 Q.push({nx,ny,nz});
-                vis[nx][ny][nz] = vis[X][Y][Z] + 1;
+                vis[nx][ny][nz] = 1;
+                board[nx][ny][nz] = 1;
                 Tomato--;
             }
         }
