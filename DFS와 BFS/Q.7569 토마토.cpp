@@ -69,12 +69,16 @@ int main() {
 
                 if (nx < 0 || nx >= M || ny < 0 || ny >= N || nz < 0 || nz >= H )
                     continue;
-                if (board[nx][ny][nz] == 1 || vis[nx][ny][nz])
+                /*if (board[nx][ny][nz] == 1 || vis[nx][ny][nz])
                     continue;
-                Q.push({nx,ny,nz});
                 vis[nx][ny][nz] = 1;
                 board[nx][ny][nz] = 1;
-                Tomato--;
+                Q.push({nx,ny,nz});
+                Tomato--; */
+                if (board[nx][ny][nz] != 0)
+                    continue;
+                Q.push({nx,ny,nz});
+                board[nx][ny][nz] = board[nx][ny][nz] + 1;
             }
         }
         Days++;
