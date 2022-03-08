@@ -16,11 +16,12 @@ int main() {
     cin.tie(0);
     cin >> N >> M;
 
-    cin >> board[];
+    cin >> board;
 
 
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
+            
             if (board == 0 ||vis[i][j])
                 continue;
             vis[i][j] = 1;
