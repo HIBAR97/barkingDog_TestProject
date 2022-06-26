@@ -26,6 +26,7 @@ int main() {
                 continue;
             vis[i][j] = 1;
 
+
             queue<pair<int, int>> Q;
             Q.push({i,j});
             while (!Q.empty()){
