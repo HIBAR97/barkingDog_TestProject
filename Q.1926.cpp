@@ -3,7 +3,7 @@
 using namespace std;
 #define X first
 #define Y second
-int board[502][502];
+short board;
 bool vis[502][502];
 int x,y;
 int dx[4] = {1,0,-1,0};

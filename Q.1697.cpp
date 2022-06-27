@@ -3,7 +3,7 @@
 using namespace std;
 #define X first
 #define Y second
-int board[100002];
+short board;
 
 int main(void) {
     ios::sync_with_stdio(0);

@@ -3,7 +3,7 @@
 using namespace std;
 #define X first
 #define Y second
-string board[1002];
+short board;
 int Fvis[1002][1002];
 int Hvis[1002][1002];
 

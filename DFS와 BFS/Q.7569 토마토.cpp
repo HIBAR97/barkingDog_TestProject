@@ -3,7 +3,7 @@
 using namespace std;
 //#define X first
 //#define Y second
-int board[102][102][102];
+short board;
 bool vis[102][102][102];
 int M,N,H;
 int Tomato = 0;
