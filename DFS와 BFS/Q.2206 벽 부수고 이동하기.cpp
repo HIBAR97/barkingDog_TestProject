@@ -58,8 +58,8 @@ int main() {
             }
 //            Q.push({N - 1, M - 1});
 //            dis[N-1][M-1] = 1;
+            return -1;
         }
-        return -1;
     }
 //    int cnt = 0;
 //    if (dis[0][0] >= 0)
