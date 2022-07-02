@@ -27,4 +27,5 @@ add_executable(21 "DFS와 BFS/Q.1012 유기농 배추.cpp")
 add_executable(22 "DFS와 BFS/Q.7569 토마토.cpp")
 add_executable(23 "DFS와 BFS/Q.2206 벽 부수고 이동하기.cpp")
 add_executable(24 "백트래킹/Q.15649 N과 M(1).cpp")
+add_executable(25 "백트래킹/Q.9663 N-Queen.cpp")
 
