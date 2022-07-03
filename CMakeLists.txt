@@ -29,5 +29,6 @@ add_executable(23 "DFS와 BFS/Q.2206 벽 부수고 이동하기.cpp")
 add_executable(24 "백트래킹/Q.15649 N과 M(1).cpp")
 add_executable(25 "백트래킹/Q.9663 N-Queen.cpp" )
 add_executable(26  "백트래킹/Q.15650 N과 M(2).cpp" )
-add_executable(27  "백트래킹/Q.15651 N과 M(3).cpp")
+add_executable(27  "백트래킹/Q.15651 N과 M(3).cpp" )
+add_executable(28   "백트래킹/Q.15652 N과 M(4).cpp")
 

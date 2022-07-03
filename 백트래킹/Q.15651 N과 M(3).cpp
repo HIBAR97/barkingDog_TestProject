@@ -13,6 +13,14 @@ void func(int k){
         return;
     }
 
+    for(int i = 1; i <= N; i++){
+        if(!used[i]){
+            arr[k] = i;
+            //used[i] = 1;
+            func(k+1);
+            used[i] = 0;
+        }
+    }
 }
 
 int main(){
