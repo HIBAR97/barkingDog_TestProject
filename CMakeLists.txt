@@ -32,4 +32,7 @@ add_executable(26  "백트래킹/Q.15650 N과 M(2).cpp" )
 add_executable(27  "백트래킹/Q.15651 N과 M(3).cpp" )
 add_executable(28   "백트래킹/Q.15652 N과 M(4).cpp" )
 add_executable(29   "백트래킹/Q.1182 부분수열의 합.cpp")
+add_executable(30  "백트래킹/Q.15649 N과 M(1) permutation.cpp")
+add_executable(31  "백트래킹/Q.15650 N과 M(2) permutation.cpp")
+add_executable(32  "백트래킹/Q.15651 N과 M(3) permutation.cpp")
 
