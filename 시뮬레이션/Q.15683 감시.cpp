@@ -41,6 +41,19 @@ int main(){
             cin >> Map[i][j];
             if (Map[i][j] != 0 && Map[i][j] != 6)
                 CCTV.push_back({i,j});
+            if (Map[i][j] == 0)
+                Result++;
+        }
+    }
+
+    for (int tmp = 0; tmp < (1<<(2*CCTV.size())); tmp++) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) 
+                Vis[i][j] = Map[i][j];
+        }
+        int Brute = tmp;
+        for (int i = 0; i < CCTV.size(); i++) {
+            int dir = Brute % 4;
 
         }
     }
