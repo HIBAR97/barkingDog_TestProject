@@ -46,7 +46,7 @@ int main(){
         }
     }
 
-    for (int tmp = 0; tmp < (1<<(2*CCTV.size())); tmp++) {
+    for (int tmp = 0; tmp < (1 << (2*CCTV.size())); tmp++) {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) 
                 Vis[i][j] = Map[i][j];
@@ -54,6 +54,27 @@ int main(){
         int Brute = tmp;
         for (int i = 0; i < CCTV.size(); i++) {
             int dir = Brute % 4;
+            Brute /= 4;
+            int x = CCTV[i].X;
+            int y = CCTV[i].Y;
+         if (Map[i][j] == 1){
+             Update(x,y,dir);
+         }else if (Map[i][j] == 2){
+             Update(x,y,dir);
+             Update(x,y,dir+2);
+         }else if(Map[i][j] == 3){
+             Update(x,y,dir);
+             Update(x,y,dir+3);
+         }else if(Map[i][j] == 4){
+             Update(x,y,dir);
+             Update(x,y,dir+4);
+         }else if(Map[i][j] == 5){
+             Update(x,y,dir);
+             Update(x,y,dir+5);
+         }else if(Map[i][j] == 6){
+             Update(x,y,dir);
+             Update(x,y,dir+6);
+         }
 
         }
     }
