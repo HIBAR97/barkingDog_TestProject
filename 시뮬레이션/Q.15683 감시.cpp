@@ -57,23 +57,20 @@ int main(){
             Brute /= 4;
             int x = CCTV[i].X;
             int y = CCTV[i].Y;
-         if (Map[i][j] == 1){
+         if (Map[x][y] == 1){
              Update(x,y,dir);
-         }else if (Map[i][j] == 2){
+         }else if (Map[x][y] == 2){
              Update(x,y,dir);
              Update(x,y,dir+2);
-         }else if(Map[i][j] == 3){
+         }else if(Map[x][y] == 3){
              Update(x,y,dir);
              Update(x,y,dir+3);
-         }else if(Map[i][j] == 4){
+         }else if(Map[x][y] == 4){
              Update(x,y,dir);
              Update(x,y,dir+4);
-         }else if(Map[i][j] == 5){
+         }else if(Map[x][y] == 5){
              Update(x,y,dir);
              Update(x,y,dir+5);
-         }else if(Map[i][j] == 6){
-             Update(x,y,dir);
-             Update(x,y,dir+6);
          }
 
         }
