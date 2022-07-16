@@ -5,7 +5,6 @@ using namespace std;
 #define Y second;
 
 int N,M;
-int Result = 0;
 int dx[4] = {1,0,-1,0};
 int dy[4] = {0,1,0,-1};
 int Map[10][10];
@@ -35,7 +34,7 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> N >> M;
-
+    int Result = 0;
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++){
             cin >> Map[i][j];
@@ -69,7 +68,7 @@ int main(){
              Update(x,y,dir);
              Update(x,y,dir+1);
              Update(x,y,dir+2);
-         }else if(Map[x][y] == 5){
+         }else{
              Update(x,y,dir);
              Update(x,y,dir+1);
              Update(x,y,dir+2);
@@ -83,8 +82,6 @@ int main(){
             }
             Result = min(Result, val);
         }
-        cout << Result;
     }
-
-
+    cout << Result;
 }
