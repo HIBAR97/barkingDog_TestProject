@@ -64,16 +64,26 @@ int main(){
              Update(x,y,dir+2);
          }else if(Map[x][y] == 3){
              Update(x,y,dir);
-             Update(x,y,dir+3);
+             Update(x,y,dir+1);
          }else if(Map[x][y] == 4){
              Update(x,y,dir);
-             Update(x,y,dir+4);
+             Update(x,y,dir+1);
+             Update(x,y,dir+2);
          }else if(Map[x][y] == 5){
              Update(x,y,dir);
-             Update(x,y,dir+5);
+             Update(x,y,dir+1);
+             Update(x,y,dir+2);
+             Update(x,y,dir+3);
          }
-
         }
+        int val = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                val += (Vis[i][j] == 0);
+            }
+            Result = min(Result, val);
+        }
+        cout << Result;
     }
 
 
