@@ -80,8 +80,8 @@ int main(){
             for (int j = 0; j < M; j++) {
                 val += (Vis[i][j] == 0);
             }
-            Result = min(Result, val);
         }
+        Result = min(Result, val);
     }
     cout << Result;
 }
