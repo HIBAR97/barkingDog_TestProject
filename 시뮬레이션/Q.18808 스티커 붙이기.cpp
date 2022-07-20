@@ -5,6 +5,16 @@ using namespace std;
 int N,M,K;
 int R,C;
 int Block[20][20][20];
+int Map[20][20];
+
+void Move(int x, int y, int idx){
+    for (int i = 0; i < idx; i++)
+        for (int j = 0; j < x; j++)
+            for (int k = 0; k < y; k++){
+                Block[k][x][y] = Block[k][x+1][y];
+                Block[k][x][y] = Block[k][x][y+1];
+            }
+}
 
 void Rotate(int x, int y, int idx){
     for (int i = 0; i < idx; i++)
@@ -21,17 +31,16 @@ int main(){
     cin >> N >> M >> K;
 
     //입력
-    for (int i = 0; i < K; i++) {
+    while (K--){
         cin >> R >> C;
-        for (int j = 0; j < R; j++)
-            for (int k = 0; k < C; k++)
-                cin >> Block[K][N][M];
+        for (int i = 0; i < R; i++)
+            for (int j = 0; j < C; j++)
+                cin >> Block[i][j];
 
+        //풀이 시작
+        for (int rotate = 0; rotate < 4; rotate++){
+            bool is_paste = false;
+
+        }
     }
-
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < M; j++)
-
-
-
 }
