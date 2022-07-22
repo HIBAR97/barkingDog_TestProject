@@ -42,14 +42,22 @@ int main(){
         //풀이 시작
         for (int rotate = 0; rotate < 4; rotate++){
             bool is_paste = false;
-            for (int x = 0; x < N-r; x++)
+            for (int x = 0; x < N-R; x++)
                 if(is_paste)
                     break;
-            for (int y = 0; y <= M-c ; y++)
+            for (int y = 0; y <= M-C; y++)
                 if(Move(x,y)){
                     is_paste = true;
                     break;
                 }
+            if (is_paste)
+                break;
+            Rotate();
         }
     }
+    int cnt = 0;
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < M; j++)
+            cnt += Map[i][j];
+    cout << cnt << "\n";
 }
