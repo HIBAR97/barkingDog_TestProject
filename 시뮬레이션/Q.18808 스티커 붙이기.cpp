@@ -4,25 +4,22 @@ using namespace std;
 
 int N,M,K;
 int R,C;
-int Block[20][20][20];
+int Block[20][20];
 int Map[20][20];
 
-void Move(int x, int y, int idx){
-    for (int i = 0; i < idx; i++)
-        for (int j = 0; j < x; j++)
-            for (int k = 0; k < y; k++){
-                Block[k][x][y] = Block[k][x+1][y];
-                Block[k][x][y] = Block[k][x][y+1];
-            }
+void Move(int x, int y){
+    for (int j = 0; j < x; j++)
+        for (int k = 0; k < y; k++){
+            Block[x][y] = Block[x+1][y];
+            Block[x][y] = Block[x][y+1];
+        }
 }
 
 void Rotate(int x, int y, int idx){
-    int Change[20][20][20];
-
-    for (int i = 0; i < idx; i++)
-        for (int j = 0; j < x ; j++)
-            for (int k = 0; k < y; k++)
-                Change[idx][x][y] = Block[idx][3-1-y][x];
+    int Change[20][20];
+    for (int j = 0; j < x ; j++)
+        for (int k = 0; k < y; k++)
+            Change[x][y] = Block[3-1-y][x];
 
 }
 
@@ -37,7 +34,7 @@ int main(){
         cin >> R >> C;
         for (int i = 0; i < R; i++)
             for (int j = 0; j < C; j++)
-                cin >> Block[K][i][j];
+                cin >> Block[i][j];
 
         //풀이 시작
         for (int rotate = 0; rotate < 4; rotate++){
