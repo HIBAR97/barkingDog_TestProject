@@ -7,20 +7,30 @@ int R,C;
 int Block[20][20];
 int Map[20][20];
 
-void Move(int x, int y){
-    for (int j = 0; j < x; j++)
-        for (int k = 0; k < y; k++){
-            Block[x][y] = Block[x+1][y];
-            Block[x][y] = Block[x][y+1];
-        }
+bool Move(int x, int y){
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            if (Map[x+i][y+j] == 1 && Block[i][j] == 1)
+                return false;
+
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            if (Block[i][j] == 1)
+                Map[x+i][y+j] = 1;
+    return true;
 }
 
-void Rotate(int x, int y, int idx){
+void Rotate(){
     int Change[20][20];
-    for (int j = 0; j < x ; j++)
-        for (int k = 0; k < y; k++)
-            Change[x][y] = Block[3-1-y][x];
+    for (int j = 0; j < R; j++)
+        for (int k = 0; k < C; k++)
+            Change[j][k] = Block[3-1-j][k];
 
+    for (int i = 0; i < C; i++)
+        for (int j = 0; j < R; j++)
+            Block[i][j] = Change[R-1-j][i];
+
+    swap(R,C);
 }
 
 int main(){
