@@ -10,13 +10,13 @@ int Map[20][20];
 bool Move(int x, int y){
     for (int i = 0; i < R; i++)
         for (int j = 0; j < C; j++)
-            if (Map[x+i][y+j] == 1 && Block[i][j] == 1)
+            if (Block[x+i][y+j] == 1 && Map[i][j] == 1)
                 return false;
 
     for (int i = 0; i < R; i++)
         for (int j = 0; j < C; j++)
-            if (Block[i][j] == 1)
-                Map[x+i][y+j] = 1;
+            if (Map[i][j] == 1)
+                Block[x+i][y+j] = 1;
     return true;
 }
 
@@ -24,11 +24,11 @@ void Rotate(){
     int Change[20][20];
     for (int j = 0; j < R; j++)
         for (int k = 0; k < C; k++)
-            Change[j][k] = Block[3-1-j][k];
+            Change[j][k] = Map[j][k];
 
     for (int i = 0; i < C; i++)
         for (int j = 0; j < R; j++)
-            Block[i][j] = Change[R-1-j][i];
+            Map[i][j] = Change[R-1-j][i];
 
     swap(R,C);
 }
@@ -44,19 +44,20 @@ int main(){
         cin >> R >> C;
         for (int i = 0; i < R; i++)
             for (int j = 0; j < C; j++)
-                cin >> Block[i][j];
+                cin >> Map[i][j];
 
         //풀이 시작
         for (int rotate = 0; rotate < 4; rotate++){
             bool is_paste = false;
-            for (int x = 0; x < N-R; x++)
+            for (int x = 0; x < N-R; x++){
                 if(is_paste)
                     break;
-            for (int y = 0; y <= M-C; y++)
-                if(Move(x,y)){
-                    is_paste = true;
-                    break;
-                }
+                for (int y = 0; y <= M-C; y++)
+                    if(Move(x,y)){
+                        is_paste = true;
+                        break;
+                    }
+            }
             if (is_paste)
                 break;
             Rotate();
@@ -65,6 +66,6 @@ int main(){
     int cnt = 0;
     for (int i = 0; i < N; i++)
         for (int j = 0; j < M; j++)
-            cnt += Map[i][j];
+            cnt += Block[i][j];
     cout << cnt << "\n";
 }
