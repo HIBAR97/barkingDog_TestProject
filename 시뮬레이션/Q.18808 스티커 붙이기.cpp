@@ -4,7 +4,7 @@ using namespace std;
 
 int N,M,K;
 int R,C;
-int Block[20][20];
+int Block[50][50];
 int Map[20][20];
 
 bool Move(int x, int y){
@@ -22,9 +22,9 @@ bool Move(int x, int y){
 
 void Rotate(){
     int Change[20][20];
-    for (int j = 0; j < R; j++)
-        for (int k = 0; k < C; k++)
-            Change[j][k] = Map[j][k];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            Change[i][j] = Map[i][j];
 
     for (int i = 0; i < C; i++)
         for (int j = 0; j < R; j++)
