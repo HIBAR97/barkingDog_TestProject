@@ -49,7 +49,7 @@ int main(){
         //풀이 시작
         for (int rotate = 0; rotate < 4; rotate++){
             bool is_paste = false;
-            for (int x = 0; x < N-R; x++){
+            for (int x = 0; x <= N-R; x++){
                 if(is_paste)
                     break;
                 for (int y = 0; y <= M-C; y++)
