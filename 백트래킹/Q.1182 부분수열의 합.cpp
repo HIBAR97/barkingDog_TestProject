@@ -3,7 +3,7 @@
 using namespace std;
 
 int N,S;
-int arr[20];
+int arr;
 int cnt = 0;
 
 void func(int k, int Sum){

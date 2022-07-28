@@ -3,7 +3,7 @@
 using namespace std;
 
 int N;
-int arr[100];
+int arr;
 int arr2[4];
 int Result_Max = -1000000001;
 int Result_Min = 1000000001;

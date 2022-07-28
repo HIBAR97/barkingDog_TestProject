@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int N,M;
-int arr[10];
+int arr;
 bool used[10];
 
 void func(int k){

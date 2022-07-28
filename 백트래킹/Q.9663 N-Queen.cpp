@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int N, M;
-int arr[4];
+int arr;
 bool used1[40];
 bool used2[40]; //x+y
 bool used3[40]; //x-y
