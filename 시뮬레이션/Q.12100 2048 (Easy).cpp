@@ -33,12 +33,30 @@ void left_side(){
         cout << arr[i] << "\n";
 }
 
+void left_side2(){
+    int able[N];
+    int idx = 0;
+
+    for (int i = 0; i < N; i++)
+        cin >> arr[i];
+
+    for (int i = 0; i < N; i++) {
+        if (arr[i] == 0)
+            continue;
+        if (able[idx] == 0)
+            able[idx] = arr[i];
+        else if (able[idx] == arr[i])
+            able[idx++] *= 2;
+        else
+            able[++idx] = arr[i];
+    }
+}
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
     cin >> N;
-    left_side();
+    left_side2();
 
 
 }
