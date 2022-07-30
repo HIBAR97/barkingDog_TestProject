@@ -51,6 +51,21 @@ void left_side2(){
             able[++idx] = arr[i];
     }
 }
+
+void Rotate(){
+    int Change[20][20];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            Change[i][j] = Map[i][j];
+
+    for (int i = 0; i < C; i++)
+        for (int j = 0; j < R; j++)
+            Map[i][j] = Change[R-1-j][i];
+
+    swap(R,C);
+}
+
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
