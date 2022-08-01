@@ -54,6 +54,8 @@ void left_side2(){
 
 void Rotate(){
     int Change[20][20];
+    int R,C;
+    int Map[20][20];
     for (int i = 0; i < R; i++)
         for (int j = 0; j < C; j++)
             Change[i][j] = Map[i][j];
@@ -64,7 +66,19 @@ void Rotate(){
 
     swap(R,C);
 }
+void Op(int dir){
 
+    while (dir--)
+        Rotate();
+    for (int i = 0; i < N; i++) {
+        int tilted[20] = {};
+        int idx = 0;
+
+        for (int j = 0; j < N; j++) {
+
+        }
+    }
+}
 
 int main() {
     ios::sync_with_stdio(0);
