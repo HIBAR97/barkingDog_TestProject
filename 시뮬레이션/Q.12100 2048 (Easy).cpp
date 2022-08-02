@@ -5,6 +5,9 @@ using namespace std;
 int N;
 int arr[10];
 
+int board[20][20];
+int board2[20][20];
+
 //일단 한행만 옆으로 실행하는 함수 만들어보기
 void left_side(){
     int Result[N];
@@ -75,6 +78,8 @@ void Op(int dir){
         int idx = 0;
 
         for (int j = 0; j < N; j++) {
+            if (board2[i][j] == 0)
+                continue;
 
         }
     }
