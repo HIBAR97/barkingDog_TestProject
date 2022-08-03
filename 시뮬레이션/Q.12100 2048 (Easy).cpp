@@ -55,6 +55,7 @@ void left_side2(){
     }
 }
 
+//전에 만들었던 회전 함수
 void Rotate(){
     int Change[20][20];
     int R,C;
@@ -70,6 +71,7 @@ void Rotate(){
     swap(R,C);
 }
 
+//실제 오퍼레이션 함수
 void Op(int dir){
 
     while (dir--)
@@ -103,6 +105,26 @@ int main() {
 
     //left_side2();
     Op(N);
-    cout >> board2[i][j];
+
+    int mx = 0;
+    for (int i = 0; i < 1024; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int k = 0; k < N; k++) {
+                board2[j][k] = board[j][k];
+                cout << board2[j][k];
+            }
+        }
+        int brute = i;
+        for (int j = 0; j < 5; j++) {
+            int dir = brute % 4;
+            brute /= 4;
+            Op(dir);
+        }
+        for (int j = 0; j < N; j++)
+            for (int k = 0; k < N; k++)
+                mx = max(mx,board2[j][k]);
+    }
+
+    cout << mx;
 
 }
