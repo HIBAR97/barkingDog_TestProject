@@ -69,6 +69,7 @@ void Rotate(){
 
     swap(R,C);
 }
+
 void Op(int dir){
 
     while (dir--)
@@ -80,8 +81,13 @@ void Op(int dir){
         for (int j = 0; j < N; j++) {
             if (board2[i][j] == 0)
                 continue;
-
+            else if (tilted[idx] == 0)
+                tilted[idx] = board2[i][j];
+            else
+                tilted[++idx] = board2[i][j];
         }
+        for (int j = 0; j < N; j++)
+            board2[i][j] = tilted[j];
     }
 }
 
@@ -90,7 +96,13 @@ int main() {
     cin.tie(0);
     
     cin >> N;
-    left_side2();
 
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            cin >> board[i][j];
+
+    //left_side2();
+    Op(N);
+    cout >> board2[i][j];
 
 }
