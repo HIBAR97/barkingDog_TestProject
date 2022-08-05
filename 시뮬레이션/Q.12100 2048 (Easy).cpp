@@ -59,14 +59,14 @@ void left_side2(){
 void Rotate(){
     int Change[20][20];
     int R,C;
-    int Map[20][20];
+
     for (int i = 0; i < R; i++)
         for (int j = 0; j < C; j++)
-            Change[i][j] = Map[i][j];
+            Change[i][j] = board2[i][j];
 
     for (int i = 0; i < C; i++)
         for (int j = 0; j < R; j++)
-            Map[i][j] = Change[R-1-j][i];
+            board2[i][j] = Change[R-1-j][i];
 
     swap(R,C);
 }
@@ -111,7 +111,7 @@ int main() {
         for (int j = 0; j < N; j++) {
             for (int k = 0; k < N; k++) {
                 board2[j][k] = board[j][k];
-                cout << board2[j][k];
+                //cout << board2[j][k];
             }
         }
         int brute = i;
