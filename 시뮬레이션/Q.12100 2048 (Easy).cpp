@@ -58,17 +58,14 @@ void left_side2(){
 //전에 만들었던 회전 함수
 void Rotate(){
     int Change[20][20];
-    int R,C;
 
-    for (int i = 0; i < R; i++)
-        for (int j = 0; j < C; j++)
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
             Change[i][j] = board2[i][j];
 
-    for (int i = 0; i < C; i++)
-        for (int j = 0; j < R; j++)
-            board2[i][j] = Change[R-1-j][i];
-
-    swap(R,C);
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            board2[i][j] = Change[N-1-j][i];
 }
 
 //실제 오퍼레이션 함수
@@ -83,8 +80,10 @@ void Op(int dir){
         for (int j = 0; j < N; j++) {
             if (board2[i][j] == 0)
                 continue;
-            else if (tilted[idx] == 0)
+            if (tilted[idx] == 0)
                 tilted[idx] = board2[i][j];
+            else if (tilted[idx] == board2[i][j])
+                tilted[idx++] *= 2;
             else
                 tilted[++idx] = board2[i][j];
         }
