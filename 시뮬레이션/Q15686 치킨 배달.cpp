@@ -8,8 +8,8 @@ using namespace std;
 int N,M;
 int Map[50][50];
 
-vector<pair<int,int>> chichen;
-vector<pair<int,int>> store;
+vector<pair<int,int>> chicken;
+vector<pair<int,int>> Home;
 
 int main() {
     ios::sync_with_stdio(0);
@@ -21,25 +21,27 @@ int main() {
         for (int j = 0; j < N; j++){
             cin >> Map[i][j];
             if (Map[i][j] == 1)
-                store.push_back({i,j});
+                Home.push_back({i,j});
             if (Map[i][j] == 2)
-                chichen.push_back({i,j});
+                chicken.push_back({i,j});
         }
 
-    vector<int> brute(chichen.size(),1);
-    fill(brute.begin(), brute.begin() + chichen.size() - M, 0);
+    vector<int> brute(chicken.size(),1);
+    fill(brute.begin(), brute.begin() + chicken.size() - M, 0);
 
     int mn = 0;
 
     do {
         int dis = 0;
-        for (auto Store : store) {
-            for (int i = 0; i < chichen.size(); i++) {
+        for (auto Store : Home) {
+            int Num = 0;
+            for (int i = 0; i < chicken.size(); i++) {
                 if (brute[i] == 0)
                     continue;
-
+                Num = min(Num, abs(chicken[i].X - Store.X) + abs(chicken[i].Y - Store.Y));
 
             }
+            dis += Num;
         }
     mn = min(mn,dis);
     }while (next_permutation(brute.begin(), brute.end()));
