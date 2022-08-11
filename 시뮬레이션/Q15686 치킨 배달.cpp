@@ -39,11 +39,11 @@ int main() {
                 if (brute[i] == 0)
                     continue;
                 Num = min(Num, abs(chicken[i].X - Store.X) + abs(chicken[i].Y - Store.Y));
-
+                cout << Num;
             }
             dis += Num;
         }
-    mn = min(mn,dis);
+        mn = min(mn,dis);
     }while (next_permutation(brute.begin(), brute.end()));
 
     cout << mn;
