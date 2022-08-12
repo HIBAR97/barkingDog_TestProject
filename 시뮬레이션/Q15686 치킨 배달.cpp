@@ -26,6 +26,7 @@ int main() {
                 chicken.push_back({i,j});
         }
 
+
     vector<int> brute(chicken.size(),1);
     fill(brute.begin(), brute.begin() + chicken.size() - M, 0);
 
