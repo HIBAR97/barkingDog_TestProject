@@ -30,17 +30,16 @@ int main() {
     vector<int> brute(chicken.size(), 1);
     fill(brute.begin(), brute.begin() + chicken.size() - M, 0);
 
-    int mn = 0;
+    int mn = 0x7f7f7f7f;
 
     do {
         int dis = 0;
         for (auto Store : Home) {
-            int Num = 0;
+            int Num = 0x7f7f7f7f;
             for (int i = 0; i < chicken.size(); i++) {
                 if (brute[i] == 0)
                     continue;
                 Num = min(Num, abs(chicken[i].X - Store.X) + abs(chicken[i].Y - Store.Y));
-                cout << Num;
             }
             dis += Num;
         }
