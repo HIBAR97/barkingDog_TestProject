@@ -33,7 +33,7 @@ void BubbleSort(){
 
 //(N+M)^2 시간복잡도 -> N+M으로 줄이기
 void MergeSort(){
-    int a[50],b[50],Result[101];
+    int a[1000001],b[1000001],Result[2000002];
     cin >> N >> M;
 
     for (int i = 0; i < N; i++)
@@ -47,8 +47,16 @@ void MergeSort(){
     for (int i = 0; i < N+M; i++) {
         if (b_idx == M)
             Result[i] = a[a_idx++];
-        else if ()
+        else if (a_idx == N)
+            Result[i] = b[b_idx++];
+        else if (a[a_idx] <= b[b_idx])
+            Result[i] = a[a_idx++];
+        else if (b[b_idx] <= a[a_idx])
+            Result[i] = b[b_idx++];
+
     }
+    for (int i = 0; i < N+M; i++)
+        cout << Result[i] << " ";
 }
 
 int main() {
@@ -57,8 +65,8 @@ int main() {
 
     //cin >> N;
 
-    BubbleSort();
-    for (int i = 0; i < N-1; i++)
-        cout << arr[i] << '\n';
+    MergeSort();
+//    for (int i = 0; i < N-1; i++)
+//        cout << arr[i] << '\n';
 
 }
