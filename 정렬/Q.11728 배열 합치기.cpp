@@ -61,6 +61,18 @@ void MergeSort(){
 
 void MergeSort2(){
     int N = 10;
+    int arr[10] = {3,2,7,155,23,63,72,345,234,45};
+    int Result[11];
+
+    void Merge_Sort(int start, int end) {
+        if(start == end)
+            return;
+
+        int Mid = (start + end)/2;
+        Merge_Sort(start,mid);
+        Marge_Sort(mid,end);
+        MargeSort(start,end);
+    }
 
 }
 
@@ -70,7 +82,11 @@ int main() {
 
     //cin >> N;
 
-    MergeSort();
+    MergeSort2();
+
+    for (int i = 0; i < N; i++)
+        cout << arr[i] << ' ';
+
 //    for (int i = 0; i < N-1; i++)
 //        cout << arr[i] << '\n';
 
