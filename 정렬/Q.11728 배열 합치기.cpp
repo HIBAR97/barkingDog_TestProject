@@ -32,7 +32,7 @@ void BubbleSort(){
 }
 
 //(N+M)^2 시간복잡도 -> N+M으로 줄이기
-void MergeSort(){
+void MergeSort(int start, int end){
     int a[1000001],b[1000001],Result[2000002];
     cin >> N >> M;
 
@@ -59,21 +59,15 @@ void MergeSort(){
         cout << Result[i] << " ";
 }
 
-void MergeSort2(){
-    int N = 10;
-    int arr[10] = {3,2,7,155,23,63,72,345,234,45};
-    int Result[11];
 
-    void Merge_Sort(int start, int end) {
-        if(start == end)
-            return;
+void Merge_Sort(int start, int end) {
+    if(end == start + 1)
+        return;
 
-        int Mid = (start + end)/2;
-        Merge_Sort(start,mid);
-        Marge_Sort(mid,end);
-        MargeSort(start,end);
-    }
-
+    int Mid = (start + end)/2;
+    Merge_Sort(start,Mid);
+    Merge_Sort(Mid, end);
+    MergeSort(start,end);
 }
 
 int main() {
@@ -82,7 +76,7 @@ int main() {
 
     //cin >> N;
 
-    MergeSort2();
+    Merge_Sort(0,0);
 
     for (int i = 0; i < N; i++)
         cout << arr[i] << ' ';
