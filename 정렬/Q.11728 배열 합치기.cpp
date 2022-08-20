@@ -55,7 +55,7 @@ void MergeSort(int start, int end){
             Result[i] = b[b_idx++];
 
     }
-    for (int i = 0; i < N+M; i++)
+    for (int i = 0; i < N; i++)
         cout << Result[i] << " ";
 }
 
@@ -74,9 +74,9 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    //cin >> N;
+    cin >> N;
 
-    Merge_Sort(0,0);
+    Merge_Sort(0,N);
 
     for (int i = 0; i < N; i++)
         cout << arr[i] << ' ';
