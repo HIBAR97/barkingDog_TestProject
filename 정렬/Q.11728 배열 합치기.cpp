@@ -70,6 +70,27 @@ void Merge_Sort(int start, int end) {
     MergeSort(start,end);
 }
 
+void Quick_Sort(){
+    int arr[8] = {5,2,4,-4,-7 ,10,-10,-9};
+    int tmp[8];
+    int tmp_idx = 0;
+    int arr2 = arr[0];
+
+    for (int i = 0; i < 8; i++)
+        if (arr[i] <= arr2)
+            tmp[tmp_idx++] = arr[i];
+    tmp[tmp_idx++] = arr2;
+
+    for (int i = 0; i < 8; i++)
+        if (arr[i] > arr2)
+            tmp[tmp_idx++] = arr[i];
+
+    for (int i = 0; i < 8; i++)
+        arr[i] = tmp[i];
+
+
+}
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
