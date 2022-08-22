@@ -99,10 +99,15 @@ void Quick_Sort2(int start, int end){
 
     while (true){
 
-        while (1 <= Start_idx && arr[Start_idx] <= pivot)
+        while (1 <= end_idx && arr[end_idx] <= pivot)
             Start_idx++;
-        while ()
+        while (1 <= end_idx && arr[end_idx] >= pivot)
+            end_idx--;
+        swap(arr[Start_idx],arr[end_idx]);
     }
+    swap(arr[start],arr[end_idx]);
+    Quick_Sort2(start,end_idx);
+
 }
 
 int main() {
