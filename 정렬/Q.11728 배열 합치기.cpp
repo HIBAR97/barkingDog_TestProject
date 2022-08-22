@@ -88,7 +88,21 @@ void Quick_Sort(){
     for (int i = 0; i < 8; i++)
         arr[i] = tmp[i];
 
+}
 
+void Quick_Sort2(int start, int end){
+    if(end <= start + 1)
+        return;
+    int pivot = arr[start];
+    int Start_idx = start + 1;
+    int end_idx = end - 1;
+
+    while (true){
+
+        while (1 <= Start_idx && arr[Start_idx] <= pivot)
+            Start_idx++;
+        while ()
+    }
 }
 
 int main() {
