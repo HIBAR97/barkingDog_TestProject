@@ -91,6 +91,7 @@ void Quick_Sort(){
 }
 
 void Quick_Sort2(int start, int end){
+    int arr[8] = {5,2,4,-4,-7 ,10,-10,-9};
     if(end <= start + 1)
         return;
     int pivot = arr[start];
@@ -107,7 +108,7 @@ void Quick_Sort2(int start, int end){
     }
     swap(arr[start],arr[end_idx]);
     Quick_Sort2(start,end_idx);
-
+    Quick_Sort2(end_idx, end);
 }
 
 int main() {
@@ -116,7 +117,9 @@ int main() {
 
     cin >> N;
 
-    Merge_Sort(0,N);
+    //Merge_Sort(0,N);
+
+    Quick_Sort2(0,N);
 
     for (int i = 0; i < N; i++)
         cout << arr[i] << ' ';
