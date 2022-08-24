@@ -104,11 +104,13 @@ void Quick_Sort2(int start, int end){
             Start_idx++;
         while (1 <= end_idx && arr[end_idx] >= pivot)
             end_idx--;
+        if (Start_idx > end_idx)
+            break;
         swap(arr[Start_idx],arr[end_idx]);
     }
     swap(arr[start],arr[end_idx]);
     Quick_Sort2(start,end_idx);
-    Quick_Sort2(end_idx, end);
+    Quick_Sort2(end_idx + 1, end);
 }
 
 int main() {
