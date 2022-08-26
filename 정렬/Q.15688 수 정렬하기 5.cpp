@@ -17,9 +17,8 @@ int main() {
         arr[arr_idx - 1]++;
     }
 
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < arr[i]; j++)
-            cout << i + 1 << '\n';
-
+    for (int i = 0; i < 2000000; i++)
+        while(arr[i]++)
+            cout << i - 1000000 << '\n';
 
 }
