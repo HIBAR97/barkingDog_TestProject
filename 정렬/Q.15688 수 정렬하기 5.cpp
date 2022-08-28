@@ -14,11 +14,11 @@ int main() {
 
     for (int i = 0; i < N; i++){
         cin >> arr_idx;
-        arr[arr_idx - 1]++;
+        arr[arr_idx + 1000000]++;
     }
 
     for (int i = 0; i < 2000000; i++)
-        while(arr[i]++)
+        while(arr[i]--)
             cout << i - 1000000 << '\n';
 
 }
