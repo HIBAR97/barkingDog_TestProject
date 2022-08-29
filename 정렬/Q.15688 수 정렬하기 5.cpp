@@ -17,7 +17,7 @@ int main() {
         arr[arr_idx + 1000000]++;
     }
 
-    for (int i = 0; i < 2000000; i++)
+    for (int i = 0; i <= 2000000; i++)
         while(arr[i]--)
             cout << i - 1000000 << '\n';
 
