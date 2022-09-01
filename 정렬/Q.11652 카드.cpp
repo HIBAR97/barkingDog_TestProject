@@ -53,6 +53,23 @@ void Radix_Sort(){
 
 }
 
+void STL_Sort(){
+    int a[5] = {1,4,5,2,7};
+    sort(a,a+5);
+
+    vector<int> b = {1,4,5,2,7};
+    sort(b.begin(), b.end());
+
+    bool cmp(int a, int b){
+        if(a % 5 != b % 5)
+            return a % 5 < b % 5;
+        return a < b;
+    }
+
+    int a[7] = {1,2,3,4,5,6,7};
+    sort(a, a + 7, cmp);
+}
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
@@ -71,9 +88,6 @@ int main() {
         }
 
     }
-
-
-
 
 
     //Radix_Sort();
