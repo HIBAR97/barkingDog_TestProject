@@ -2,6 +2,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int N, arr_idx;
+vector<int> a;
+
+
 void Fail_Radix_Sort(int N){
     int Test_Data[10] = {012,421,046,674,103,502,007,100,021,545};
     vector<int> vector;
@@ -53,6 +57,25 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    Radix_Sort();
-    cout << "1";
+    cin >> N;
+    for (int i = 0; i < N; i++){
+        cin >> arr_idx;
+        for (int j = 0; j < a.size(); j++) {
+
+            if (a.at(j) != arr_idx)
+                a.push_back(arr_idx);
+
+            else if (a.at(j) == arr_idx)
+                a.insert(j,j+1);
+
+        }
+
+    }
+
+
+
+
+
+    //Radix_Sort();
+
 }
