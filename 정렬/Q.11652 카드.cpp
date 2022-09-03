@@ -4,6 +4,7 @@ using namespace std;
 
 int N, arr_idx;
 vector<int> a;
+long long b[1000005];
 
 
 void Fail_Radix_Sort(int N){
@@ -88,8 +89,12 @@ int main() {
         }
 
     }
-
-
     //Radix_Sort();
+
+    sort(b, b+N);
+    int cnt = 0;
+    long long Max = -(111 << 62) - 1;
+    int Max_cnt = 0;
+
 
 }
