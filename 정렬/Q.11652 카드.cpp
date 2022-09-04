@@ -96,5 +96,18 @@ int main() {
     long long Max = -(111 << 62) - 1;
     int Max_cnt = 0;
 
-
+    for (int i = 0; i < N; i++) {
+        if(i == 0 || a[i-1] == a[i])
+            cnt++;
+        else{
+            if(cnt > Max_cnt){
+                Max_cnt = cnt;
+                Max = b[i-1];
+            }
+            cnt = 1;
+        }
+    }
+    if(cnt > Max_cnt)
+        Max = b[N-1];
+    cout << Max;
 }
