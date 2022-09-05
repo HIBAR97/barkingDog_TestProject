@@ -54,21 +54,48 @@ void Radix_Sort(){
 
 }
 
-void STL_Sort(){
-    int a[5] = {1,4,5,2,7};
-    sort(a,a+5);
+//void STL_Sort(){
+//    int a[5] = {1,4,5,2,7};
+//    sort(a,a+5);
+//
+//    vector<int> b = {1,4,5,2,7};
+//    sort(b.begin(), b.end());
+//
+//    bool cmp(int a, int b){
+//        if(a % 5 != b % 5)
+//            return a % 5 < b % 5;
+//        return a < b;
+//    }
+//
+//    int a[7] = {1,2,3,4,5,6,7};
+//    sort(a, a + 7, cmp);
+//}
 
-    vector<int> b = {1,4,5,2,7};
-    sort(b.begin(), b.end());
 
-    bool cmp(int a, int b){
-        if(a % 5 != b % 5)
-            return a % 5 < b % 5;
-        return a < b;
+void Result(){
+    cin >> N;
+    for (int i = 0; i < N; i++)
+        cin >> b[i];
+
+    sort(b, b+N);
+    int cnt = 0;
+    long long Max = -(111 << 62) - 1;
+    int Max_cnt = 0;
+
+    for (int i = 0; i < N; i++) {
+        if(i == 0 || b[i-1] == b[i])
+            cnt++;
+        else{
+            if(cnt > Max_cnt){
+                Max_cnt = cnt;
+                Max = b[i-1];
+            }
+            cnt = 1;
+        }
     }
-
-    int a[7] = {1,2,3,4,5,6,7};
-    sort(a, a + 7, cmp);
+    if(cnt > Max_cnt)
+        Max = b[N-1];
+    cout << Max;
 }
 
 int main() {
@@ -91,23 +118,4 @@ int main() {
     }
     //Radix_Sort();
 
-    sort(b, b+N);
-    int cnt = 0;
-    long long Max = -(111 << 62) - 1;
-    int Max_cnt = 0;
-
-    for (int i = 0; i < N; i++) {
-        if(i == 0 || a[i-1] == a[i])
-            cnt++;
-        else{
-            if(cnt > Max_cnt){
-                Max_cnt = cnt;
-                Max = b[i-1];
-            }
-            cnt = 1;
-        }
-    }
-    if(cnt > Max_cnt)
-        Max = b[N-1];
-    cout << Max;
 }
