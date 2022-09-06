@@ -55,8 +55,8 @@ void Radix_Sort(){
 }
 
 //void STL_Sort(){
-//    int a[5] = {1,4,5,2,7};
-//    sort(a,a+5);
+//    int C[5] = {1,4,5,2,7};
+//    sort(C,C+5);
 //
 //    vector<int> b = {1,4,5,2,7};
 //    sort(b.begin(), b.end());
@@ -114,8 +114,6 @@ int main() {
                 a.insert(j,j+1);
 
         }
-
     }
     //Radix_Sort();
-
 }
