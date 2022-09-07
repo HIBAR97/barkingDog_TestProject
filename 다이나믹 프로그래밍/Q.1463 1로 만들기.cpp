@@ -1,0 +1,50 @@
+//https://www.acmicpc.net/problem/1463
+#include <bits/stdc++.h>
+using namespace std;
+int arr[10000001];
+int N, Fuc;
+
+void Dynamic_Programming(){
+
+}
+
+int Make_1(int Num, int tamp){
+    if (Num % 3 == 0 && Num % 2 == 0)
+        Num = min(Num/2, Num/3);
+
+    else if (Num % 3 == 0)
+        Num = Num / 3;
+
+    else if (Num % 2 == 0)
+        Num = Num / 2;
+
+    else
+        Num = Num - 1;
+
+    tamp++;
+    Make_1(Num,tamp);
+
+    cout << tamp;
+}
+
+void Make_2(){
+    arr[1] = 0;
+    for (int i = 2; i <= N; i++) {
+        arr[i] = arr[i-1] + 1;
+        if (i % 2 == 0)
+            arr[i] = min(arr[i],arr[i/2] + 1);
+        if (i % 3 == 0)
+            arr[i] = min(arr[i], arr[i/3] + 1);
+    }
+    cout << arr[N];
+}
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    cin >> N;
+
+    //Make_1(N,Fuc);
+    Make_2();
+}
