@@ -12,6 +12,9 @@ int Make_1(int Num, int tamp){
     if (Num % 3 == 0 && Num % 2 == 0)
         Num = min(Num/2, Num/3);
 
+    else if (Num % 3 == 0 || Num % 2 == 0)
+        Num = Num / 3;
+
     else if (Num % 3 == 0)
         Num = Num / 3;
 
