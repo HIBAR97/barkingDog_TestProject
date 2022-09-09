@@ -4,10 +4,6 @@ using namespace std;
 int arr[10000001];
 int N, Fuc;
 
-void Dynamic_Programming(){
-
-}
-
 int Make_1(int Num, int tamp){
     if (Num % 3 == 0 && Num % 2 == 0)
         Num = min(Num/2, Num/3);
