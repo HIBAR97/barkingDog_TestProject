@@ -6,7 +6,12 @@ int arrN[11];
 int arrR[11];
 
 int Result(){
+    arrR[1] = 1;
+    arrR[2] = 2;
+    arrR[3] = 4;
 
+    for (int i = 0; i < 11; i++)
+        arrR[i] = arrR[i - 1] + arrR[i - 2] + arrR[i - 3];
 
 }
 
@@ -16,7 +21,7 @@ int OTT(){
     for (int i = 0; i < T; i++)
         cin >> arrN[i];
 
-
+    Result();
 }
 
 int main() {
