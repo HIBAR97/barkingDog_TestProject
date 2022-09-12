@@ -15,7 +15,7 @@ int OTT(){
     arrR[2] = 2;
     arrR[3] = 4;
 
-    for (int i = 0; i < 11; i++)
+    for (int i = 4; i < 11; i++)
         arrR[i] = arrR[i - 1] + arrR[i - 2] + arrR[i - 3];
 
     cin >> T;
