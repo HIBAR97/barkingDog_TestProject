@@ -6,6 +6,11 @@ int arrN[11];
 int arrR[11];
 
 int Result(){
+
+}
+
+int OTT(){
+
     arrR[1] = 1;
     arrR[2] = 2;
     arrR[3] = 4;
@@ -13,15 +18,14 @@ int Result(){
     for (int i = 0; i < 11; i++)
         arrR[i] = arrR[i - 1] + arrR[i - 2] + arrR[i - 3];
 
-}
-
-int OTT(){
     cin >> T;
 
-    for (int i = 0; i < T; i++)
-        cin >> arrN[i];
+    while (T--){
+        cin >> N;
+        cout << arrR[N] << '\n';
+    }
 
-    Result();
+    //Result();
 }
 
 int main() {
