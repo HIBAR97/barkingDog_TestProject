@@ -9,7 +9,7 @@ int Result(){
 
 }
 
-int OTT(){
+void OTT(){
 
     arrR[1] = 1;
     arrR[2] = 2;
@@ -24,12 +24,11 @@ int OTT(){
         cin >> N;
         cout << arrR[N] << '\n';
     }
-
     //Result();
 }
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-
+    OTT();
 }

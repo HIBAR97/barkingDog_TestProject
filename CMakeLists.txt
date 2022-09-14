@@ -45,5 +45,5 @@ add_executable(39 "정렬/Q.11728 배열 합치기.cpp" )
 add_executable(40 "정렬/Q.15688 수 정렬하기 5.cpp")
 add_executable(41 "정렬/Q.11652 카드.cpp" )
 add_executable(42 "다이나믹 프로그래밍/Q.1463 1로 만들기.cpp" )
-add_executable(43  "다이나믹 프로그래밍/Q.9095 1,2,3 더하기.cpp")
-
+add_executable(43  "다이나믹 프로그래밍/Q.9095 1,2,3 더하기.cpp" )
+add_executable(44 "다이나믹 프로그래밍/Q.2579 계단 오르기.cpp")
