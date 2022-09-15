@@ -4,7 +4,7 @@ using namespace std;
 
 int arr[301];
 int arrS[10000];
-int N;
+int N, Total;
 
 int main() {
     ios::sync_with_stdio(0);
@@ -12,8 +12,11 @@ int main() {
 
     cin >> N;
 
-    for (int i = 0; i < N; i)
+    for (int i = 0; i < N; i){
         cin >> arrS[i];
+        Total += arrS[i];
+    }
+
 
 
 }
