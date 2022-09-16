@@ -16,7 +16,14 @@ int main() {
         cin >> arrS[i];
         Total += arrS[i];
     }
+    
+    arr[1] = arrS[1];
+    arr[2] = arrS[2];
+    arr[3] = arrS[3];
 
+    for (int i = 4; i < N -1; i++)
+        arr[i] = min(arr[i-2], arr[i-3]) + arrS[i];
 
+    cout << Total - min(arr[N -1], arr[N -2]);
 
 }
