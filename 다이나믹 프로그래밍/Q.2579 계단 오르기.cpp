@@ -16,7 +16,12 @@ int main() {
         cin >> arrS[i];
         Total += arrS[i];
     }
-    
+
+    if (N <= 2){
+        cout << Total;
+        return 0;
+    }
+
     arr[1] = arrS[1];
     arr[2] = arrS[2];
     arr[3] = arrS[3];
