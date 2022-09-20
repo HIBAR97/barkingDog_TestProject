@@ -2,11 +2,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int arr[301];
-int arrS[10000];
+int arr[305];
+int arrS[305];
 int N = 0, Total = 0;
 
-int main() {
+int main(void) {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
@@ -26,7 +26,7 @@ int main() {
     arr[2] = arrS[2];
     arr[3] = arrS[3];
 
-    for (int i = 4; i < N -1; i++)
+    for (int i = 4; i <= N -1; i++)
         arr[i] = min(arr[i-2], arr[i-3]) + arrS[i];
 
     cout << Total - min(arr[N -1], arr[N -2]);
