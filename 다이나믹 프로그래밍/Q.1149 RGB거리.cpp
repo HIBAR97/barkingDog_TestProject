@@ -3,7 +3,7 @@
 using namespace std;
 
 int N;
-int Cost_R[1001], Cost_G[1001], Cost_B[1001];
+int Cost_R[1010], Cost_G[1010], Cost_B[1010];
 int House[1001][3];
 
 int main(void) {
@@ -11,11 +11,8 @@ int main(void) {
     cin.tie(0);
     cin >> N;
 
-    for (int i = 1; i <= N; i++){
-        cin >> Cost_R[i];
-        cin >> Cost_G[i];
-        cin >> Cost_B[i];
-    }
+    for (int i = 1; i <= N; i++)
+        cin >> Cost_R[i] >> Cost_G[i] >> Cost_B[i];
 
     House[1][0] = Cost_R[1];
     House[1][1] = Cost_G[1];
