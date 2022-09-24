@@ -11,17 +11,17 @@ int main(void) {
     cin.tie(0);
     cin >> N;
 
-    for (int i = 1; i <= N; i++)
+    for (int i = 0; i < N; i++)
         cin >> Cost_R[i] >> Cost_G[i] >> Cost_B[i];
 
-    House[1][0] = Cost_R[1];
-    House[1][1] = Cost_G[1];
-    House[1][2] = Cost_B[1];
+    House[1][0] = Cost_R[0];
+    House[1][1] = Cost_G[0];
+    House[1][2] = Cost_B[0];
 
-    for (int i = 2; i <= N; i++){
-        House[i][0] = min(House[i -1][1], House[i -1][2] + Cost_R[i]);
-        House[i][1] = min(House[i -1][0], House[i -1][2] + Cost_G[i]);
-        House[i][2] = min(House[i -1][0], House[i -1][1] + Cost_B[i]);
+    for (int i = 2; i <= N; i++) {
+        House[i][0] = min(House[i - 1][1], House[i - 1][2]) + Cost_R[i];
+        House[i][1] = min(House[i - 1][0], House[i - 1][2]) + Cost_G[i];
+        House[i][2] = min(House[i - 1][0], House[i - 1][1]) + Cost_B[i];
     }
 
     cout << min({House[N][0], House[N][1], House[N][2]});
