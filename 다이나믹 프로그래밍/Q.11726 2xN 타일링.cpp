@@ -14,6 +14,8 @@ int main(void) {
     Block[1] = 1;
     Block[2] = 2;
 
-    for (int i = 0; i < N; ++i)
+    for (int i = 0; i < N; i++)
+        Block[i] = (Block[i -1] + Block[i -2]) % 10007;
 
+    cout << Block[N];
 }
