@@ -3,6 +3,7 @@
 using namespace std;
 
 int N,M;
+int i,j;
 int arr[10005], Result[10005];
 
 int main(void) {
@@ -19,6 +20,7 @@ int main(void) {
     }
 
     while(M--){
-
+        cin >> i >> j;
+        cout << Result[j] - Result[i -1] << '\n';
     }
 }
