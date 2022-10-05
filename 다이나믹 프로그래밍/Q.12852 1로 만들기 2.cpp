@@ -4,6 +4,7 @@ using namespace std;
 
 int N;
 int arr[100005], Map[100005];
+int Result;
 
 int main(void) {
     ios::sync_with_stdio(0);
@@ -27,4 +28,11 @@ int main(void) {
         }
     }
     cout << Map[N] << '\n';
+
+    Result = N;
+
+    while (1){
+        cout << Result << ' ';
+
+    }
 }
