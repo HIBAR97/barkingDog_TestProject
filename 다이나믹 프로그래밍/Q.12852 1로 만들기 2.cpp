@@ -16,5 +16,15 @@ int main(void) {
         Map[i] = Map[i -1] + 1;
         arr[i] = i -1;
 
+        if (i %2 == 0 && Map[i] > Map[i/2] + 1){
+            Map[i] = Map[i /2] + 1;
+            arr[i] = i/2;
+        }
+
+        if (i %3 == 0 && Map[i] > Map[i /3] + 1){
+            Map[i] = Map[i/3] + 1;
+            arr[i] = i/3;
+        }
     }
+    cout << Map[N] << '\n';
 }
