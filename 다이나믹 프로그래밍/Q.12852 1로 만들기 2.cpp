@@ -33,6 +33,8 @@ int main(void) {
 
     while (1){
         cout << Result << ' ';
-
+        if (Result == 1)
+            break;
+        Result = arr[Result];
     }
 }
