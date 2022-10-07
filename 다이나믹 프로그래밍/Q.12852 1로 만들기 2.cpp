@@ -13,6 +13,7 @@ int main(void) {
     cin >> N;
 
     Map[0] = 0;
+
     for (int i = 2; i <= N; i++) {
         Map[i] = Map[i -1] + 1;
         arr[i] = i -1;
