@@ -3,7 +3,7 @@
 using namespace std;
 
 int N;
-int arr[100005], Map[100005];
+int arr[1000005], Map[1000005];
 int Result;
 
 int main(void) {
