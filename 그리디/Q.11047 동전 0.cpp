@@ -15,11 +15,9 @@ int main(void) {
     for (int i = 0; i < N; i++)
         cin >> Coin_arr[i];
 
-    for (int i = N; i < 0; i--) {
-        if (K % Coin_arr[i] == 0){
-            K /= Coin_arr[i];
-            Coin++;
-        }
+    for (int i = N -1; i >= 0; i--) {
+        Coin += K / Coin_arr[i];
+        K %= Coin_arr[i];
     }
 
     cout << Coin;
