@@ -20,10 +20,8 @@ int main(void) {
         if (T > Time[i].first)
             continue;
 
-        else if (T <= Time[i].first){
             Result++;
             T = Time[i].second;
-        }
     }
     cout << Result;
 }
