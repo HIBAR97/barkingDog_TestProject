@@ -4,24 +4,26 @@ using namespace std;
 
 int N;
 int T = 0;
-int Result;
-pair <int, int> Time[10000005];
+int Result = 0;
+pair <int, int> Time[100005];
 
 int main(void) {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
+    cin >> N;
+
     for (int i = 0; i < N; i++) 
-        cin >> Time[i].first >> Time[i].second;
+        cin >> Time[i].second >> Time[i].first;
 
     sort(Time, Time +N);
 
     for (int i = 0; i < N; i++) {
-        if (T > Time[i].first)
+        if (T > Time[i].second)
             continue;
 
             Result++;
-            T = Time[i].second;
+            T = Time[i].first;
     }
     cout << Result;
 }
