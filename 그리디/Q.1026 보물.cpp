@@ -22,7 +22,7 @@ int main(void) {
     sort(B, B +N);
 
     for (int i = 0; i < N; i++)
-        Result += A[i] * B[i];
+        Result += A[i] * B[N -i -1];
 
     cout << Result;
 }
