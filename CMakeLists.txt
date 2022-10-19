@@ -55,4 +55,7 @@ add_executable(49 "그리디/Q.11047 동전 0.cpp" )
 add_executable(50 "그리디/Q.1931 회의실 배정.cpp")
 add_executable(51 "그리디/Q.2217 로프.cpp")
 add_executable(52 "그리디/Q.1026 보물.cpp")
+add_executable(53 "그리디/Q.12865 평범한 배낭.cpp")
+
+
 
