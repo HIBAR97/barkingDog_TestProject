@@ -19,13 +19,10 @@ int main(void) {
     sort(Mono, Mono +N);
 
     for (int i = 0; i < N; i++) {
-        if (V > Bag_W)
-            continue;
-        Bag_W += Mono[i].second;
-        Bag_V += Mono[i].first;
+        for (int j = K; j >= 1; j--) {
+            if (Mono[i].second <= i)
 
-        if (V <= Bag_W)
-            cout << Bag_V;
+        }
     }
 
 }
