@@ -2,10 +2,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int N,W,V;
-int K;
-pair<int, int> Mono[105];
-int Bag_W, Bag_V;
+int N,K;
+int Mono[105][100005];
+int W[105];
+int V[105];
+
 
 int main(void) {
     ios::sync_with_stdio(0);
@@ -16,12 +17,10 @@ int main(void) {
     for (int i = 0; i < N; i++)
         cin >> Mono[i].second >> Mono[i].first;
 
-    sort(Mono, Mono +N);
-
     for (int i = 0; i < N; i++) {
-        for (int j = K; j >= 1; j--) {
-            if (Mono[i].second <= i)
-
+        for (int j = 0; j < K; j++) {
+            if (j - W[i] >= 0)
+                Mono[i][j];
         }
     }
 
