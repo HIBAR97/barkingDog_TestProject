@@ -14,13 +14,13 @@ int main(void) {
 
     cin >> N >> K;
 
-    for (int i = 0; i < N; i++)
+    for (int i = 1; i <= N; i++)
         cin >> W[i] >> V[i];
 
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < K; j++) {
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= K; j++) {
             if (j - W[i] >= 0)
-                Mono[i][j] = max(Mono[i -1][j], Mono[i -1][j] - W[i]] + V[i]);
+                Mono[i][j] = max(Mono[i -1][j], Mono[i -1][j - W[i]] + V[i]);
             else
                 Mono[i][j] = Mono[i -1][j];
         }
