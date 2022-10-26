@@ -1,4 +1,5 @@
 //https://www.acmicpc.net/problem/1477
+//그리디 문제 아님 parametiric search
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,6 +14,9 @@ int main(void) {
 
     for (int i = 0; i < N; i)
         cin >> Wait[i];
+
+    sort(Wait, Wait +N);
+
 
 
 }
