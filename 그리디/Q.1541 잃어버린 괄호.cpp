@@ -4,6 +4,7 @@ using namespace std;
 
 int Num_arr[55];
 string Mass_arr[55];
+string temp;
 string str;
 int Result;
 
@@ -17,6 +18,14 @@ int main(void) {
         if (str[i] == '+' || str[i] == '-' || str[i] == '\n')
             if (minus)
                 Result -= stoi(temp);
+            else
+                Result += stoi(temp);
+            temp = "";
+
+        if (str[i] == '-')
+            minus = true;
+        else
+            temp += str[i];
 
     }
 
