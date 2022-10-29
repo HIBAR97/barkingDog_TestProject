@@ -16,17 +16,19 @@ int main(void) {
 
     for (int i = 0; i < str.size(); i++) {
         if (str[i] == '+' || str[i] == '-' || str[i] == '\n')
-            if (minus)
+            if (minus){
                 Result -= stoi(temp);
+            }
             else
                 Result += stoi(temp);
             temp = "";
 
-        if (str[i] == '-')
+        if (str[i] == '-'){
             minus = true;
+        }
         else
             temp += str[i];
 
     }
-
+    cout << Result;
 }
