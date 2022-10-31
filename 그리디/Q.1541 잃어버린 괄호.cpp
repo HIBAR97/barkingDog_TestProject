@@ -7,6 +7,7 @@ string Mass_arr[55];
 string temp;
 string str;
 int Result;
+bool minus = false;
 
 int main(void) {
     ios::sync_with_stdio(0);
