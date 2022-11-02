@@ -59,6 +59,7 @@ add_executable(53 "그리디/Q.12865 평범한 배낭.cpp")
 add_executable(54 "그리디/Q.1477 휴게소 세우기.cpp")
 add_executable(55 "그리디/Q.11399 ATM.cpp" )
 add_executable(56 "그리디/Q.1541 잃어버린 괄호.cpp")
+add_executable(57 "그리디/Q.5585 거스름돈.cpp")
 
 
 
