@@ -4,6 +4,7 @@ using namespace std;
 
 int N;
 int Result;
+int Return;
 int arr[6] = {500,100,50,10,5,1};
 
 int main() {
@@ -12,10 +13,12 @@ int main() {
 
     cin >> N;
 
+    Return = 1000 - N;
+
     for (int i = 0; i < 6; i++)
-        if (N / arr[i] > 0){
-            N -= N/arr[i] * arr[i];
-            Result += N/arr[i];
+        if (Return / arr[i] > 0){
+            Result += Return/arr[i];
+            Return %= arr[i];
         }
 
     cout << Result;
