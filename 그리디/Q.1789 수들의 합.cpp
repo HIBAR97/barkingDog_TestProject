@@ -3,8 +3,8 @@
 using namespace std;
 
 int N,S;
-int Num;
-int cnt = 1;
+int Num = 1;
+int cnt = 0;
 long long Result = 0;
 
 int main() {
@@ -14,16 +14,15 @@ int main() {
     cin >> S;
 
     while (true){
-        if (Result < S){
-            Result += Num;
-            cnt++;
-        }
-        else if (Result > S) {
+        Result += Num;
+        cnt++;
+
+        if (Result > S) {
             cnt--;
             break;
         }
         Num++;
     }
 
-    cout << Result;
+    cout << cnt;
 }
