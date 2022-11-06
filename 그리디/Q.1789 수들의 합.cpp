@@ -3,6 +3,7 @@
 using namespace std;
 
 int N,S;
+int Num;
 int cnt = 1;
 long long Result = 0;
 
@@ -13,12 +14,15 @@ int main() {
     cin >> S;
 
     while (true){
-        if (Result < S)
-            Result += cnt;
+        if (Result < S){
+            Result += Num;
+            cnt++;
+        }
         else if (Result > S) {
             cnt--;
             break;
         }
+        Num++;
     }
 
     cout << Result;
