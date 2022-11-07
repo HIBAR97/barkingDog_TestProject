@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int N,S;
+long long S;
 int Num = 1;
 int cnt = 0;
 long long Result = 0;
