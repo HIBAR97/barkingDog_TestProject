@@ -43,16 +43,12 @@ void Fuc3(){
     for (int i = 1; i < N; i++) {
         arr[i] = arr[i -1] +1;
 
-        if (N % 3 == 0)
-            arr[i] = N /3;
-
-        if (N % 2 == 0)
-            arr[i] = N /2;
-
-        else
-            arr[i] = N -1;
+        if (i % 2 == 0)
+            ;
+        if (i % 3 == 0)
+            ;
     }
-
+    cout << arr[N];
 }
 int main() {
     ios::sync_with_stdio(0);
