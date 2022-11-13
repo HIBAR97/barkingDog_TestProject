@@ -46,7 +46,7 @@ void Fuc3(){
         if (i % 2 == 0)
             arr[i] = min(arr[i], arr[i/2] + 2);
         if (i % 3 == 0)
-            ;
+            arr[i] = min(arr[i], arr[i / 3] + 2);
     }
     cout << arr[N];
 }
