@@ -7,6 +7,11 @@ int arrR[11];
 
 int Result(){
 
+    cin >> T;
+    while (T--){
+        cin >> N;
+        cout << Result;
+    }
 }
 
 void OTT(){
@@ -31,4 +36,5 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     OTT();
+
 }
