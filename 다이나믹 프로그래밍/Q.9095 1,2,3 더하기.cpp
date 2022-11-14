@@ -7,6 +7,14 @@ int arrR[11];
 
 int Result(){
 
+    arrN[1] = 1;
+    arrN[2] = 2;
+    arrN[3] = 3;
+
+    for (int i = 4; i < 11; i++) {
+
+    }
+
     cin >> T;
     while (T--){
         cin >> N;
