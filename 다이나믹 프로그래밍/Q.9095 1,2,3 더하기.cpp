@@ -12,7 +12,7 @@ int Result(){
     arrN[3] = 3;
 
     for (int i = 4; i < 11; i++) {
-
+        arrN[i] = arrN[i -1] + arrN[i - 2] + arrN[i - 3];
     }
 
     cin >> T;
