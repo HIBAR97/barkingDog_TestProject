@@ -9,7 +9,7 @@ int Result(){
 
     arrN[1] = 1;
     arrN[2] = 2;
-    arrN[3] = 3;
+    arrN[3] = 4;
 
     for (int i = 4; i < 11; i++) {
         arrN[i] = arrN[i -1] + arrN[i - 2] + arrN[i - 3];
@@ -18,7 +18,7 @@ int Result(){
     cin >> T;
     while (T--){
         cin >> N;
-        cout << Result;
+        cout << Result << "\n";
     }
 }
 
