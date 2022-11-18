@@ -6,6 +6,13 @@ int arr[305];
 int arrS[305];
 int N = 0, Total = 0;
 
+void fun1(){
+    for (int i = 0; i < N; i++) {
+        cin >> arrS[i];
+        Total += arrS[i];
+    }
+}
+
 int main(void) {
     ios::sync_with_stdio(0);
     cin.tie(0);
