@@ -11,6 +11,11 @@ void fun1(){
         cin >> arrS[i];
         Total += arrS[i];
     }
+    if (N <= 2){
+        cout << Total;
+        return 0;
+    }
+
 }
 
 int main(void) {
