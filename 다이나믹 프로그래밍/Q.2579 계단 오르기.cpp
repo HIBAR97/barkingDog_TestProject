@@ -13,8 +13,8 @@ void fun1(){
     }
     if (N <= 2){
         cout << Total;
-        return 0;
     }
+
 
 }
 
