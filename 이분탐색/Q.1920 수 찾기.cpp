@@ -6,6 +6,21 @@ int N,M,cnt;
 int arr_N[100005];
 int arr_M[100005];
 
+int search(int T){
+    int st = 0;
+    int end = N-1;
+
+    while (st < end){
+        int mid = (st+end) /2;
+        if (arr_N[mid] < T)
+            st = mid + 1;
+        else if (arr_N[mid] > T)
+            end = mid - 1;
+        else
+            return 1;
+    }
+}
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
