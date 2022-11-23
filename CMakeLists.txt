@@ -61,7 +61,8 @@ add_executable(55 "그리디/Q.11399 ATM.cpp" )
 add_executable(56 "그리디/Q.1541 잃어버린 괄호.cpp")
 add_executable(57 "그리디/Q.5585 거스름돈.cpp" )
 add_executable(58 "그리디/Q.1789 수들의 합.cpp")
-add_executable(59 "이분탐색/Q.1920 수 찾기.cpp")
+add_executable(59 "이분탐색/Q.1920 수 찾기.cpp" )
+add_executable(60 "이분탐색/Q.10816 숫자 카드 2.cpp")
 
 
 
