@@ -53,7 +53,7 @@ int main() {
     while (M--){
        cin >> T;
 
-       cout << Result_L(T,N);
+       cout << Result_L(T,N) - Result_R(T,N) << '\n';
     }
 
 }
