@@ -6,7 +6,7 @@ int N, M, T;
 int arr_N[500005];
 int arr_M[20000005];
 
-int Result(int T, int l){
+int Result_L(int T, int l){
     int start = 0;
     int end = l;
 
@@ -17,6 +17,23 @@ int Result(int T, int l){
             end = mid;
         else
             start = mid +1;
+    }
+    return start;
+}
+
+int Result_R(int T, int l){
+    int start = 0;
+    int end = l;
+
+    while(start < end){
+        int mid = (start + end) /2;
+
+        if (arr_N[mid] > T)
+            end = mid;
+
+        else
+            start = mid +1;
+
     }
     return start;
 }
@@ -36,7 +53,7 @@ int main() {
     while (M--){
        cin >> T;
 
-       cout << Result(T,N);
+       cout << Result_L(T,N);
     }
 
 }
