@@ -44,16 +44,16 @@ int main() {
 
     cin >> N;
     for (int i = 0; i < N; i++)
-        cin >> arr_M[i];
+        cin >> arr_N[i];
 
-    sort(arr_M, arr_M+N);
+    sort(arr_N, arr_N +N);
 
     cin >> M;
 
     while (M--){
        cin >> T;
 
-       cout << Result_L(T,N) - Result_R(T,N) << '\n';
+       cout << Result_R(T,N) - Result_L(T,N) << '\n';
     }
 
 }
