@@ -4,6 +4,7 @@ using namespace std;
 
 int N;
 int arr_N[1000005];
+vector<int> Result;
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
@@ -17,6 +18,8 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         if (i == 0 || arr_N[i -1] != arr_N[i])
-
+            Result.push_back(arr_N[i]);
     }
+    for (int i = 0; i < N; i++)
+        cout <<
 }
