@@ -21,5 +21,5 @@ int main() {
             Result.push_back(arr_N[i]);
     }
     for (int i = 0; i < N; i++)
-        cout << lower_bound(Result.begin(), Result.end(), arr_N[i]) - Result.begin() << '';
+        cout << lower_bound(Result.begin(), Result.end(), arr_N[i]) - Result.begin() << ' ';
 }
