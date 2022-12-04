@@ -4,20 +4,23 @@ using namespace std;
 
 int N;
 int arr_N[1000005];
-vector<int> Result;
+vector<int> Result, temp;
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
     cin >> N;
 
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++){
         cin >> arr_N[i];
+        temp.push_back(arr_N[i]);
+    }
 
-    sort(arr_N, arr_N +N);
+
+    sort(temp.begin(), temp.end());
 
     for (int i = 0; i < N; i++) {
-        if (i == 0 || arr_N[i -1] != arr_N[i])
+        if (i == 0 || temp[i -1] != temp[i])
             Result.push_back(arr_N[i]);
     }
     for (int i = 0; i < N; i++)
