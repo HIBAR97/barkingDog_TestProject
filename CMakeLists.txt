@@ -64,6 +64,7 @@ add_executable(58 "그리디/Q.1789 수들의 합.cpp")
 add_executable(59 "이분탐색/Q.1920 수 찾기.cpp" )
 add_executable(60 "이분탐색/Q.10816 숫자 카드 2.cpp")
 add_executable(61 "이분탐색/Q.18870 좌표 압축.cpp")
+add_executable(62 "이분탐색/Q.2295 세 수의 합.cpp")
 
 
 
