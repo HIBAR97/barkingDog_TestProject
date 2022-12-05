@@ -21,7 +21,7 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         if (i == 0 || temp[i -1] != temp[i])
-            Result.push_back(arr_N[i]);
+            Result.push_back(temp[i]);
     }
     for (int i = 0; i < N; i++)
         cout << lower_bound(Result.begin(), Result.end(), arr_N[i]) - Result.begin() << ' ';
