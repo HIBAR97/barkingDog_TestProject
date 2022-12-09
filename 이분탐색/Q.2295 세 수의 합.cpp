@@ -22,5 +22,11 @@ int main() {
 
     sort(Plus.begin(), Plus.end());
 
+    for (int i = N -1; i > 0; i--)
+        for (int j = 0; j < N; j++)
+            if (binary_search(Plus.begin(), Plus.end(), arr[i] - arr[j])){
+                cout << arr[i];
+                return 0;
+            }
 
 }
