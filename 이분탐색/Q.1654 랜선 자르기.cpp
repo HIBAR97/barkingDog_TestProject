@@ -6,6 +6,8 @@ int K, N;
 int arr[1000005];
 int Total, Div;
 
+typedef long long ll;
+
 int TF(int Div, int N){
     int Result;
 
@@ -16,6 +18,15 @@ int TF(int Div, int N){
         return 1;
     else
         return 0;
+}
+
+bool Solve(ll x){
+    ll cur = 0;
+
+    for (int i = 0; i < K; i++)
+        cur += arr[i] /x;
+
+    return cur >= N;
 }
 
 int main() {
