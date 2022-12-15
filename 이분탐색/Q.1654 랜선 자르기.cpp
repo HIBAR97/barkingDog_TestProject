@@ -37,11 +37,18 @@ int main() {
 
     for (int i = 0; i < K; i++){
         cin >> arr[i];
-        Total += arr[i];
+        //Total += arr[i];
     }
 
-    Div = Total / N;
+    ll start = 1;
+    ll end = 2^31 - 1;
 
-    if (TF(Div, N))
+    while(start < end){
+        ll midle = (start + end + 1)/2;
+        if (Solve(midle))
+            start = midle;
+    }
+
+    cout << start;
 
 }
