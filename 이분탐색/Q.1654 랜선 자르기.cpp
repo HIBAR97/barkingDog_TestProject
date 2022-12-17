@@ -46,7 +46,10 @@ int main() {
     while(start < end){
         ll midle = (start + end + 1)/2;
         if (Solve(midle))
-            start = midle - 1;
+            start = midle;
+
+        else
+            end = midle - 1;
     }
 
     cout << start;
