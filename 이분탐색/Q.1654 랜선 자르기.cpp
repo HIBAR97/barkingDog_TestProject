@@ -3,7 +3,7 @@
 using namespace std;
 
 int K, N;
-int arr[1000005];
+int arr[10005];
 int Total, Div;
 
 typedef long long ll;
@@ -41,7 +41,7 @@ int main() {
     }
 
     ll start = 1;
-    ll end = 2^31 - 1;
+    ll end = 0x7fffffff;
 
     while(start < end){
         ll midle = (start + end + 1)/2;
