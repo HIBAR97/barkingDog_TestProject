@@ -5,6 +5,7 @@ using namespace std;
 int N,M;
 int arr[100000005];
 int end = 0 ;
+int Result;
 
 int main() {
     ios::sync_with_stdio(0);
@@ -18,9 +19,10 @@ int main() {
     sort(arr, arr +N);
 
     for (int i = 0; i < N; i++) {
-        while (end < N && arr[end] - arr[i] < M)
-            end++;
-        if (end = N)
-            break;
+        while (end < N && arr[i] - arr[i] < M){
+            if (i = N)
+                break;
+            Result = min(Result, arr[end] - arr[i])
+        }
     }
 }
