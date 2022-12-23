@@ -4,7 +4,7 @@ using namespace std;
 
 int N,M;
 int arr[100000005];
-int end = 0 ;
+int end = 0, start;
 int Result;
 
 int main() {
@@ -18,11 +18,12 @@ int main() {
 
     sort(arr, arr +N);
 
-    for (int i = 0; i < N; i++) {
-        while (end < N && arr[i] - arr[i] < M){
+    for (int start = 0; start < N; start++) {
+        while (end < N && arr[end] - arr[end] < M){
             if (i = N)
                 break;
             Result = min(Result, arr[end] - arr[i])
         }
+        cout << Result;
     }
 }
