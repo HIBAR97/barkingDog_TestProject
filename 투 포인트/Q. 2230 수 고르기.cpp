@@ -19,11 +19,12 @@ int main() {
     sort(arr, arr +N);
 
     for (int start = 0; start < N; start++) {
-        while (end < N && arr[end] - arr[end] < M){
-            if (i = N)
-                break;
-            Result = min(Result, arr[end] - arr[i])
-        }
-        cout << Result;
+        while (end < N && arr[end] - arr[start] < M)
+            end++;
+        if (end = N)
+            break;
+        Result = min(Result, arr[end] - arr[start])
+
     }
+    cout << Result;
 }
