@@ -3,8 +3,8 @@
 using namespace std;
 
 int N,M;
-int arr[100000005];
-int end = 0, start;
+int arr[100005];
+int End, start;
 int Result;
 
 int main() {
@@ -18,12 +18,12 @@ int main() {
 
     sort(arr, arr +N);
 
-    for (int start = 0; start < N; start++) {
-        while (end < N && arr[end] - arr[start] < M)
-            end++;
-        if (end = N)
+    for (start = 0; start < N; start++) {
+        while (End < N && arr[End] - arr[start] < M)
+            End++;
+        if (End == N)
             break;
-        Result = min(Result, arr[end] - arr[start])
+        Result = min(Result, arr[End] - arr[start]);
 
     }
     cout << Result;
