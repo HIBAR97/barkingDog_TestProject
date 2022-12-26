@@ -5,7 +5,7 @@ using namespace std;
 int N,M;
 int arr[100005];
 int End, start;
-int Result;
+int Result = 0x7fffffff;
 
 int main() {
     ios::sync_with_stdio(0);
