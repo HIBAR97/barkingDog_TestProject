@@ -20,6 +20,6 @@ int main() {
     for (int Start = 0; Start < N; ++Start) {
         End++;
         if (End != N)
-
+            Result += arr[End];
     }
 }
