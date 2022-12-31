@@ -18,13 +18,15 @@ int main() {
     Result = arr[0];
 
     for (int Start = 0; Start < N; ++Start) {
-        End++;
-        if (End != N)
-            Result += arr[End];
+        while(End < N && Result < Start){
+            End++;
+            if (End != N)
+                Result += arr[End];
+        }
+        if (End == N)
+            break;
+        Result = min(Result, End - Start + 1);
+        Result -= arr[Start]
     }
-    if (End == N)
-        break;
 
-    Result = min(Result, End - Start + 1);
-    Result -= arr[Start]
 }
