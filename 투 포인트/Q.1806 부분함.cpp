@@ -22,4 +22,9 @@ int main() {
         if (End != N)
             Result += arr[End];
     }
+    if (End == N)
+        break;
+
+    Result = min(Result, End - Start + 1);
+    Result -= arr[Start]
 }
