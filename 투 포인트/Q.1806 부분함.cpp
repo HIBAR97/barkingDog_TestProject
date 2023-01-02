@@ -26,7 +26,9 @@ int main() {
         if (End == N)
             break;
         Result = min(Result, End - Start + 1);
-        Result -= arr[Start]
+        Result -= arr[Start];
     }
-
+    if (Result == 0x7fffffff)
+        Result = 0;
+    cout < Result;
 }
