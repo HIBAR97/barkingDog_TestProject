@@ -5,6 +5,7 @@ using namespace std;
 int N, S;
 int arr[100005];
 int Result, End;
+int Min = 0x7fffffff;
 
 int main() {
     ios::sync_with_stdio(0);
@@ -25,10 +26,10 @@ int main() {
         }
         if (End == N)
             break;
-        Result = min(Result, End - Start + 1);
+        Min = min(Min, End - Start + 1);
         Result -= arr[Start];
     }
     if (Result == 0x7fffffff)
-        Result = 0;
-    cout < Result;
+        Min = 0;
+    cout << Min;
 }
