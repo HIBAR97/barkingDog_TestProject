@@ -29,7 +29,7 @@ int main() {
         Min = min(Min, End - Start + 1);
         Result -= arr[Start];
     }
-    if (Result == 0x7fffffff)
+    if (Min == 0x7fffffff)
         Min = 0;
     cout << Min;
 }
