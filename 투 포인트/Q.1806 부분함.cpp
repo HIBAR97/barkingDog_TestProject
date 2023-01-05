@@ -18,8 +18,8 @@ int main() {
 
     Result = arr[0];
 
-    for (int Start = 0; Start < N; ++Start) {
-        while(End < N && Result < Start){
+    for (int Start = 0; Start < N; Start++) {
+        while(End < N && Result < S){
             End++;
             if (End != N)
                 Result += arr[End];
