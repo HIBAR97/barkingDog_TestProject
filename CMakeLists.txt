@@ -68,6 +68,7 @@ add_executable(62 "이분탐색/Q.2295 세 수의 합.cpp")
 add_executable(63 "이분탐색/Q.1654 랜선 자르기.cpp")
 add_executable(64 "투 포인트/Q. 2230 수 고르기.cpp")
 add_executable(65 "투 포인트/Q.1806 부분함.cpp")
+add_executable(66 "해시/Q.7785 회사에 있는 사람.cpp")
 
 
 
