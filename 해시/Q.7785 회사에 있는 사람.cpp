@@ -12,7 +12,9 @@ int main() {
     cin >> N;
 
     while (N--){
+        cin >> Name >> log;
 
+        if ()
     }
 
 }
