@@ -14,7 +14,7 @@ int main() {
     while (N--){
         cin >> Name >> log;
 
-        if ()
+        if (log == 'enter')
     }
 
 }
