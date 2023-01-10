@@ -7,7 +7,9 @@ int main() {
     cin.tie(0);
 
     int N;
-    string Name;
+    string Name, log;
+
+    unordered_set<string> s;
 
     cin >> N;
 
@@ -15,6 +17,9 @@ int main() {
         cin >> Name >> log;
 
         if (log == 'enter')
+            s.end(Name);
+        else
+            s.erase(Name);
     }
 
 }
