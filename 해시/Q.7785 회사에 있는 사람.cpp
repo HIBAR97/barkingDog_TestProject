@@ -16,10 +16,12 @@ int main() {
     while (N--){
         cin >> Name >> log;
 
-        if (log == 'enter')
-            s.end(Name);
+        if (log == "enter")
+            s.insert(Name);
         else
             s.erase(Name);
     }
+
+    vector<string> Result(s.begin(), s.end());
 
 }
