@@ -23,5 +23,8 @@ int main() {
     }
 
     vector<string> Result(s.begin(), s.end());
+    sort(Result.begin(), Result.end(), greater<string>());
 
+    for(auto x : Result)
+        cout << x << '\n';
 }
