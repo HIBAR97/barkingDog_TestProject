@@ -27,4 +27,5 @@ int main() {
 
     for(auto x : Result)
         cout << x << '\n';
+
 }
