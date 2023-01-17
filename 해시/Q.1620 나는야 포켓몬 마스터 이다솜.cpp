@@ -11,4 +11,13 @@ int main() {
     cin.tie(0);
 
     cin >> N >> M;
+
+    for (int i = 0; i < N; i++){
+        cin >> Int_to_S[i];
+        S_to_Int[Int_to_S[i]] = i;
+    }
+
+    while (M--){
+
+    }
 }
