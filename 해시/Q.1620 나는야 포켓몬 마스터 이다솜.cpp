@@ -20,6 +20,7 @@ int main() {
 
     while (M--){
         cin >> Q;
+
         if (isdigit(Q[0]))
             cout << Int_to_S[stoi(Q)] << '\n';
         else
