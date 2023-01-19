@@ -22,6 +22,7 @@ int main() {
         cin >> Q;
         if (isdigit(Q[0]))
             cout << Int_to_S[stoi(Q)] << '\n';
-
+        else
+            cout << S_to_Int[Q] << '\n';
     }
 }
