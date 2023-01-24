@@ -6,8 +6,11 @@ int M = 1000005;
 int A = 1000;
 int MAX = 500005;
 
-int Hash(string& s){
-
+int Hash(string& S){
+    int H = 0;
+    for(auto x : S)
+        H = (H * A + X) % M;
+    return H;
 }
 
 
