@@ -9,8 +9,16 @@ int MAX = 500005;
 int Hash(string& S){
     int H = 0;
     for(auto x : S)
-        H = (H * A + X) % M;
+        H = (H * A + x) % M;
     return H;
+}
+
+int Find(string k){
+
+}
+
+void Insert(string K, ing V){
+
 }
 
 
