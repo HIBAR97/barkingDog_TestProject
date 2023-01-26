@@ -17,7 +17,15 @@ int Find(string k){
 
 }
 
-void Insert(string K, ing V){
+void Insert(string K, string V){
+
+}
+
+void Erase(string K){
+
+}
+
+void Test() {
 
 }
 
