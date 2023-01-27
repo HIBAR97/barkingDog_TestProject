@@ -13,8 +13,15 @@ int Hash(string& S){
     return H;
 }
 
-int Find(string k){
-
+int Find(string K){
+    int H = hash_mine(K);
+    int idx = bead[H];
+    while(idx != -1){
+        if (key[idx] == k)
+            return idx;
+        idx = nxt[idx];
+    }
+    return -1;
 }
 
 void Insert(string K, string V){
