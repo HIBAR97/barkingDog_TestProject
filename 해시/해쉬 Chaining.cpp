@@ -25,6 +25,12 @@ int Find(string K){
 }
 
 void Insert(string K, string V){
+ int idx = Find(K);
+    if (idx != -1){
+        val[idx] = v;
+        return;
+    }
+    int H = hash_mine(K);
 
 }
 
