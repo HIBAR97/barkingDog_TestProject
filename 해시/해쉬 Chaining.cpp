@@ -31,6 +31,13 @@ void Insert(string K, string V){
         return;
     }
     int H = hash_mine(K);
+    key[unused] = K;
+    val[unsend] = V;
+
+    if (head[H] != -1){
+        nxt[unused] = head[H];
+        pre[head[H]] = unused;
+    }
 
 }
 
