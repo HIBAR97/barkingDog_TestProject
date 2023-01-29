@@ -38,7 +38,8 @@ void Insert(string K, string V){
         nxt[unused] = head[H];
         pre[head[H]] = unused;
     }
-
+    head[H] = unused;
+    unused++;
 }
 
 void Erase(string K){
