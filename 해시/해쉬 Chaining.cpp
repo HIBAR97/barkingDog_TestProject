@@ -43,6 +43,11 @@ void Insert(string K, string V){
 }
 
 void Erase(string K){
+    int idx = Find(K);
+    if (idx == -1)
+        return;
+    if (pre[idx] != -1)
+        nxt[pre[idx]] = nxt[idx];
 
 }
 
