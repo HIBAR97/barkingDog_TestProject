@@ -48,7 +48,13 @@ void Erase(string K){
         return;
     if (pre[idx] != -1)
         nxt[pre[idx]] = nxt[idx];
+    if (nxt[idx] != -1)
+        pre[nxt[idx]] pre[idx];
 
+    int H = hash_mine[K];
+
+    if (head[H] == idx)
+        head[H] = nxt[idx];
 }
 
 void Test() {
