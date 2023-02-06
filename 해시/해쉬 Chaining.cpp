@@ -55,6 +55,10 @@ void Erase(string K){
 
     if (head[H] == idx)
         head[H] = nxt[idx];
+
+    int H = hash_mine(K);
+    if (head[H] == idx)
+        head[H] = nxt[idx];
 }
 
 void Test() {
