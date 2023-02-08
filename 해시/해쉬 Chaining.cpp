@@ -70,5 +70,7 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     fill(status, status + M, EMPTY);
+    fill(pre, pre + MX, -1);
+    fill(nxt, nxt + MX, -1);
 
 }
